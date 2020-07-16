@@ -29,34 +29,15 @@ public class Office_2 extends Read_qr{
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		//update resolution
 		
 		
 			try {
 				Update_data.main(args);
 			} catch (SQLException e) {
-				// TODO Автоматически созданный блок catch
 				e.printStackTrace();
 			}
 		
 		
-		//update status
-		//String column;
-		
-		//Scanner in = new Scanner(System.in);
-		//String answer= "yes";
-        /*System.out.print("Would you like to update the field 'notes'?");
-        if (in.hasNext()) {
-        	column = in.nextLine();
-        	in.close();
-        	if (column.equalsIgnoreCase(answer)) {
-        	try {
-    			Update_data.main("notes");
-    		} catch (SQLException e) {
-    			e.printStackTrace();
-    		}
-    		}
-        }*/
 		System.out.println("QR-code is creating...");
 		Dinamyc_connection2.main(args);
 }
@@ -71,13 +52,10 @@ public class Office_2 extends Read_qr{
         Statement myStmt = null;
         
         try {
-            // 1. Get a connection to database
             myConn = DriverManager.getConnection(url, user, password);
  
-            // 2. Create a statement
             myStmt = myConn.createStatement();
  
-            // 3. Execute SQL query
             String sql = "insert into users " + " (applicant, supervisor, address, subject, content)"
                     + " values (" + "'"+ str_1 + " ', " + "'"+ str_2 + " ', " + "'"+ str_3 + " ', " + "'"+ str_4 + " ', " + "'" + str_5 + " ')";
             myStmt.executeUpdate(sql);
