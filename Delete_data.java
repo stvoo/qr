@@ -13,15 +13,10 @@ public class Delete_data {
         String url = "jdbc:postgresql://localhost:5432/qr_data";
         String user = "postgres";
         String password = "12345";
-        //String error= "status";
  
         Connection myConn = null;
         Statement myStmt = null;
- 
-        /*Scanner in = new Scanner(System.in);
-        System.out.print("Input the id of the row that you would like to delete:");
-        int id = in.nextInt();
-        in.close();*/
+
         
         try {
             // 1. Get a connection to database
