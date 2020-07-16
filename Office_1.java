@@ -27,7 +27,6 @@ public class Office_1 extends Read_qr{
 		try {
 			Delete_data.main(args);
 		} catch (SQLException e1) {
-			// TODO Автоматически созданный блок catch
 			e1.printStackTrace();
 		}
 		Read_qr.main(args);
@@ -57,13 +56,10 @@ static void Proc(String str_1, String str_2, String str_3, String str_4, String 
     Statement myStmt = null;
     
     try {
-        // 1. Get a connection to database
         myConn = DriverManager.getConnection(url, user, password);
 
-        // 2. Create a statement
         myStmt = myConn.createStatement();
 
-        // 3. Execute SQL query
         String sql = "insert into users " + " (applicant, supervisor, address, subject, content, resolution, status)"
                 + " values (" + "'"+ str_1 + " ', " + "'"+ str_2 + " ', " + "'"+ str_3 + " ', " + "'"+ str_4 + " ', "
         		+ "'" + str_5 + " ', " + str_6 + "'" + str_7 + "')";
