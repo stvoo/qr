@@ -30,15 +30,11 @@ public class Dinamyc_connection {
                 String name3 = rs.getString(4);
                 String name4 = rs.getString(5);
                 String name5 = rs.getString(6);
-              //  String name6 = rs.getString(7);
-              //  String name7 = rs.getString(8);
                 
                 name1 = name1.concat(name2);
                 name1 = name1.concat(name3);
                 name1 = name1.concat(name4);
                 name1 = name1.concat(name5);
-              //  name1 = name1.concat(name6);
-              //  name1 = name1.concat(name7);
                 
                 Dinamyc_connection.generate_qr(i, name1);
                 i++;
