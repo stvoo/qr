@@ -32,7 +32,6 @@ public class Read_qr {
                 
                 a = readQRCode(filePath, charset, hintMap);
             } catch (Exception e) {
-                // TODO: handle exception
             }
         }
     public static String readQRCode(String filePath, String charset, Map hintMap)
