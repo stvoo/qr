@@ -39,7 +39,7 @@ public class Dinamyc_connection2 {
                 name1 = name1.concat(name6);
                 name1 = name1.concat(name7);
                
-                Dinamyc_connection.generate_qr(i, name1);
+                Dinamyc_connection2.generate_qr(i, name1);
                 i++;
 			}			
 		} catch(Exception e) {
