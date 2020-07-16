@@ -1,4 +1,4 @@
-package hui;
+package qr_govnyaha;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -67,7 +67,7 @@ public class Update_data {
             // 3. Execute SQL query
             java.util.Scanner in = new Scanner(System.in);
             //Scanner in = new Scanner(System.in);
-            //–≈«ŒÀﬁÿÕ
+            //√ê√Ö√á√é√ã√û√ò√ç
             System.out.print("Input new data for the field resolution: ");
             if (in.hasNext()) {
             	new_data = in.nextLine();
@@ -84,7 +84,7 @@ public class Update_data {
             String sql = "update users set resolution='" + new_data + " ' where id='" + id + "'";
             //in.close();
             //Scanner inn = new Scanner(System.in);
-            //—“¿“”—
+            //√ë√í√Ä√í√ì√ë
             System.out.print("Input new data for the field status: ");
             new_dataa = in.nextLine();
             if (in.hasNext()) {
