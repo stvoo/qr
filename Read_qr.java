@@ -22,7 +22,7 @@ import com.google.zxing.qrcode.decoder.ErrorCorrectionLevel;
 public class Read_qr {
 	
     public static String a;
-	public static void main(String[] args) throws WriterException, IOException, NotFoundException {
+	public static void main(String[] args) throws WriterException, IOException, NotFoundException, SQLException {
             try {
                 String filePath = "D:\\zxing_jars\\qr_sql\\0.png";
                 String charset = "UTF-8";
