@@ -1,4 +1,4 @@
-package qr_govyaha;
+package qr;
 
 import java.io.File;
 import java.sql.Connection;
