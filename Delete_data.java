@@ -26,7 +26,7 @@ public class Delete_data {
             myStmt = myConn.createStatement();
  
             // 3. Execute SQL query
-            String sql = "delete from users where id='1'";/* + id + '*/
+            String sql = "delete from users where id='1'";
  
             int rowsAffected = myStmt.executeUpdate(sql);
  
