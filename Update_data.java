@@ -14,7 +14,6 @@ import java.util.Scanner;
 public class Update_data {
 
 	public static void main(String[] args) throws SQLException{
-    	String answer= "yes";
     	Update_resolution(args);
     }
     
@@ -50,57 +49,58 @@ public class Update_data {
                 } catch (InputMismatchException e) {
                 	System.out.print(e.getMessage()); 
                 }
-                id = in.nextInt(); 
-            String sql = "update users set resolution='" + new_data + " ' where id='" + id + "'";
-            System.out.print("Input new data for the field status: ");
-            new_dataa = in.nextLine();
-            if (in.hasNext()) {
-                new_dataa = in.nextLine();
-                System.out.print("Input the id of the citizen: ");
-                try {
-                	while(!in.hasNextInt()) {
+            	id = in.nextInt(); 
+            	String sql = "update users set resolution='" + new_data + " ' where id='" + id + "'";
+            	System.out.print("Input new data for the field status: ");
+            	new_dataa = in.nextLine();
+            	if (in.hasNext()) {
+                	new_dataa = in.nextLine();
+               		System.out.print("Input the id of the citizen: ");
+               		try {
+                		while(!in.hasNextInt()) {
                 		System.out.println("That is not a valid input, try again.");
-                        in.nextInt();
-                	}
-                } catch (InputMismatchException e) {
-                	System.out.print(e.getMessage()); 
-                }
-                id = in.nextInt(); 
-             String sql1 = "update users set status='" + new_dataa + " ' where id='" + id + "'";
+                       		in.nextInt();
+                		}
+                	} catch (InputMismatchException e) {
+                		System.out.print(e.getMessage()); 
+               		}
+             		id = in.nextInt(); 
+            		String sql1 = "update users set status='" + new_dataa + " ' where id='" + id + "'";
                
              
-             System.out.print("Input new data for the field notes: ");
-                new_dataaa = in.nextLine();
-                if (in.hasNext()) {
-                    new_dataaa = in.nextLine();
-                    System.out.print("Input the id of the citizen: ");
-                    try {
-                    	while(!in.hasNextInt()) {
-                    		System.out.println("That is not a valid input, try again.");
-                            in.nextInt();
-                    	}
-                    } catch (InputMismatchException e) {
-                    	System.out.print(e.getMessage()); 
-                    }
-                    id = in.nextInt(); 
+             		System.out.print("Input new data for the field notes: ");
+            		new_dataaa = in.nextLine();
+             		if (in.hasNext()) {
+                		new_dataaa = in.nextLine();
+                 		System.out.print("Input the id of the citizen: ");
+                 		try {
+                   			while(!in.hasNextInt()) {
+                    			System.out.println("That is not a valid input, try again.");
+                        		in.nextInt();
+                    			}
+                 		} catch (InputMismatchException e) {
+                    			System.out.print(e.getMessage()); 
+                 		}
+                 		id = in.nextInt(); 
             
-            String sql2 = "update users set notes='" + new_dataaa + " ' where id='" + id + "'";
+             			String sql2 = "update users set notes='" + new_dataaa + " ' where id='" + id + "'";
             
-            int rowsAffected = myStmt.executeUpdate(sql);
-            int rowsAffected1 = myStmt.executeUpdate(sql1);
-            int rowsAffected2 = myStmt.executeUpdate(sql2);
-            in.close();
+            			int rowsAffected = myStmt.executeUpdate(sql);
+            			int rowsAffected1 = myStmt.executeUpdate(sql1);
+            			int rowsAffected2 = myStmt.executeUpdate(sql2);
+            			in.close();
  
-            System.out.println("Rows affected: " + rowsAffected1);
-            System.out.println("Update complete.");
-            
-        }}}}
+            			System.out.println("Rows affected: " + rowsAffected1);
+            			System.out.println("Update complete.");
+       			}
+		}
+	    }
+	}
       
-    
-        catch (Exception exc) {
+   	catch (Exception exc) {
             exc.printStackTrace();
-        }
-        finally {
+	} 
+	finally {
             if (myStmt != null) {
                 myStmt.close();
             }
@@ -108,6 +108,7 @@ public class Update_data {
             if (myConn != null) {
                 myConn.close();
             }
-            }
+        }
         
-    }}
+    }
+}
