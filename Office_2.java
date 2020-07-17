@@ -1,4 +1,4 @@
-package qr_govyaha;
+package qr;
 
 import java.io.IOException;
 import java.sql.SQLException;
