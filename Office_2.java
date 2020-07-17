@@ -15,7 +15,7 @@ import com.google.zxing.WriterException;
 
 public class Office_2 extends Read_qr{
 
-	public static void main(String[] args) throws NotFoundException, WriterException, IOException{
+	public static void main(String[] args) throws NotFoundException, WriterException, IOException, SQLException {
 		Read_qr.main(args);
 		String[] query = a.split(" ");
 		try {
