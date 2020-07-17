@@ -11,7 +11,7 @@ import com.google.zxing.WriterException;
 
 public class Office_1 extends Read_qr{
 
-	public static void main(String[] args) throws NotFoundException, WriterException, IOException {
+	public static void main(String[] args) throws NotFoundException, WriterException, IOException, SQLException {
 		System.out.println("Hello, user!\nFill the new form.");
 		try {
 			Insert_data.main(args);
@@ -22,7 +22,17 @@ public class Office_1 extends Read_qr{
 		System.out.println("QR-code is creating...");
 		Dinamyc_connection.main(args);
 		
-		Office_2.main(args);
+		try {
+			Office_2.main(args);
+		} catch (NotFoundException e) {
+			e.printStackTrace();
+		} catch (SQLException e) {
+			e.printStackTrace();
+		} catch (WriterException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		
 		try {
 			Delete_data.main(args);
