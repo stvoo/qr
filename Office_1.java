@@ -32,7 +32,7 @@ public class Office_1 extends Read_qr{
 		Read_qr.main(args);
 		String[] query = a.split(" ");
 		try {
-			Proc(query[0],query[1],query[2], query[3], query[4], query[5], query[6]);
+			Proc(query[0],query[1],query[2], query[3], query[4], query[5], query[6], query[7]);
 		} catch (NotFoundException e) {
 			e.printStackTrace();
 		} catch (SQLException e) {
@@ -46,7 +46,7 @@ public class Office_1 extends Read_qr{
 
 
 static void Proc(String str_1, String str_2, String str_3, String str_4, String str_5, 
-		String str_6, String str_7 ) throws SQLException, WriterException, IOException, NotFoundException{
+		String str_6, String str_7, String str_8) throws SQLException, WriterException, IOException, NotFoundException{
     
     String url = "jdbc:postgresql://localhost:5432/qr_data";
     String user = "postgres";
@@ -62,7 +62,7 @@ static void Proc(String str_1, String str_2, String str_3, String str_4, String 
 
         String sql = "insert into users " + " (applicant, supervisor, address, subject, content, resolution, status)"
                 + " values (" + "'"+ str_1 + " ', " + "'"+ str_2 + " ', " + "'"+ str_3 + " ', " + "'"+ str_4 + " ', "
-        		+ "'" + str_5 + " ', " + str_6 + "'" + str_7 + "')";
+        		+ "'" + str_5 + " ', " + "'" + str_6 + "', " + "'"+ str_7 + " ', " + "'" + str_8 + "')";
         myStmt.executeUpdate(sql);
 
         System.out.println("Insert complete.");
